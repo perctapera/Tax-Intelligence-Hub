@@ -1,0 +1,14 @@
+[project]
+name = "tmcis-intelligence"
+version = "0.1.0"
+description = "TMCIS Intelligence Django API"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "django>=5.2,<5.3",
+    "djangorestframework>=3.16,<4",
+    "gunicorn>=23,<24",
+    "psycopg[binary]>=3.2,<4",
+]
+
+[tool.uv]
+package = false

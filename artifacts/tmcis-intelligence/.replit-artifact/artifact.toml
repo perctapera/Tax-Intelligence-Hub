@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "TMCIS Intelligence"
+description = "A role-based prototype for merchant declarations, financial data reconciliation, explainable review indicators, investigations, social intelligence leads, and simulated TaRMS workflows. All demo records are fictional and external integrations remain disabled until authorized interfaces are configured."
+version = "1.0.0"
+id = "artifacts/tmcis-intelligence"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 21876
+
+[services.development]
+run = "pnpm --filter @workspace/tmcis-intelligence run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/tmcis-intelligence", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/tmcis-intelligence/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "21876"
+BASE_PATH = "/"

@@ -3,3 +3,11 @@
 
 # No need to store the pnpm store twice.
 .local
+
+# Local Python environments, demo database and generated static files.
+.pythonlibs
+.venv
+backend/db.sqlite3
+backend/staticfiles
+__pycache__
+*.py[cod]

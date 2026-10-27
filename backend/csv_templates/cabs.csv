@@ -1,0 +1,2 @@
+transaction_reference,tin,transaction_at,amount,currency,transaction_type,payment_reference,sender_reference_masked,receiver_reference_masked
+CABS-DEMO-001,2000768990,2026-09-15T10:30:00Z,125.50,USD,credit,INV-1006,****0987,****8831
